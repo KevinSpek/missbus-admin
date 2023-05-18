@@ -9,14 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@devexpress/dx-react-chart": "^4.0.4",
+    "@devexpress/dx-react-core": "^4.0.4",
     "@types/node": "20.1.4",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "@types/recharts": "^1.8.24",
+    "chart.js": "^4.3.0",
+    "d3-scale": "^4.0.2",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
     "next": "13.4.2",
     "react": "18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0",
+    "recharts": "^2.6.2",
     "typescript": "5.0.4"
   }
 }
