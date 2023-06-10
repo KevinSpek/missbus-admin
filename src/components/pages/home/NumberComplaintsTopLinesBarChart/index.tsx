@@ -1,3 +1,0 @@
-import NumberComplaintsTopLinesBarChart from "./NumberComplaintsTopLinesBarChart";
-
-export default NumberComplaintsTopLinesBarChart

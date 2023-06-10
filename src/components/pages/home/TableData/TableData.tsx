@@ -1,60 +1,62 @@
 import Style from './TableData.module.css'
-import misssusData from '@/assets/misssusData.json';
 
 type RowTableProps = {
-    rowData: string;
-  };
-  
-  type HeadTableProps = {
-    headData: string;
-  };
-  
-  const RowTable = ({rowData}: RowTableProps) => {
-    return (
-      <td className={Style.tableTD}>{rowData}</td>
-    )
-  }
-  
-  const HeadTable = ({headData}: HeadTableProps) => {
-    return (
-        <th className={Style.tableTH}>{headData}</th>
-    )
-  }
+  rowData: string;
+};
 
-const TableData = () => {
-    const keys = Object.keys(misssusData[0])
-    return (
-        <div className={Style.tblDiv} >
+type HeadTableProps = {
+  headData: string;
+};
 
-        <table className={Style.tbl} >
-          <thead>
+const RowTable = ({ rowData }: RowTableProps) => {
+  return (
+    <td className={Style.tableTD}>{rowData}</td>
+  )
+}
+
+const HeadTable = ({ headData }: HeadTableProps) => {
+  return (
+    <th className={Style.tableTH}>{headData}</th>
+  )
+}
+
+const TableData = ({ data }) => {
+  const keys = Object.keys(data[0])
+  return (
+    <div className={Style.tblDiv} >
+
+      <table className={Style.tbl} >
+        <thead className={Style.tableHead}>
           <tr className={Style.tableTR}>
             {
               keys.map((item, index) => (
-                <HeadTable headData={item}/>
+                <HeadTable headData={item} key={index} />
               ))
             }
-            <td style={{"width": "4px"}}/>
+            <td style={{ "width": "4px" }} />
           </tr>
-          </thead>
-          </table>
+        </thead>
+        {/* </table>
           <div className={Style.tblContentDiv}>
-          <table className={Style.tbl} >
-            <tbody>
-            {misssusData.map((item, index) => (
-              <tr key={index}>
-                {
-                  Object.keys(item).map((keyItem, keyIndex) => (
-                    <RowTable rowData={item[keyItem as keyof typeof item]}/>
-                  ))
-                }
-              </tr>
-            ))}
-            </tbody>
-          </table>
-          </div>
-      </div>
-    )
+          <table className={Style.tbl} > */}
+        <tbody>
+          {data.map((item, index) => (
+            <tr key={index}>
+              {
+                Object.keys(item).map((keyItem, keyIndex) => {
+                  const rowData = item[keyItem as keyof typeof item];
+                  if (rowData !== null) {
+                    return <RowTable rowData={rowData.toString()} key={keyIndex} />
+                  }
+                })
+              }
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {/* </div> */}
+    </div>
+  )
 }
 
 export default TableData
