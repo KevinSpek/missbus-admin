@@ -107,8 +107,17 @@ const App = () => {
       <Row fullWidth justifyContent='flex-start' padding={[16, 0]}>
         <Text text="Results" bold type="bigTitle" />
       </Row>
+      <Column fullWidth alignItems='flex-start' padding={[16, 32]}>
+        <Text text="Machine learning models comparisons" bold type="title" />
+        <Text text="Precision and recall work with binary lables. For this we converted all complaints into one label and non-complaint into another label" bold type="subTitle" />
+      </Column>
+      <Row fullWidth gap={32} style={{ "flexWrap": "wrap" }} justifyContent='flex-start' padding={[32, 0]}>
+        <BarChart title="Accuracy" labels={['Random Forest', "XGBoost", "Decision Tree"]} values={[0.8, 0.84, 0.76]} />
+        <BarChart title="Precision" labels={['Random Forest', "XGBoost", "Decision Tree"]} values={[0.774, 0.709, 0.742]} />
+        <BarChart title="Recall" labels={['Random Forest', "XGBoost", "Decision Tree"]} values={[0.923, 0.846, 0.884]} />
+        <BarChart title="F1 score" labels={['Random Forest', "XGBoost", "Decision Tree"]} values={[0.842, 0.772, 0.807]} />
+      </Row>
 
-      <BarChart title="Machine learning models accuracy" labels={['Random Forest', "XGBoost", "Decision Tree"]} values={[0.8, 0.84, 0.76]} />
 
     </Column>
 
