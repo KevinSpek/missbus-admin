@@ -1,20 +1,12 @@
 import Style from './TableData.module.css'
 
-type RowTableProps = {
-  rowData: string;
-};
-
-type HeadTableProps = {
-  headData: string;
-};
-
-const RowTable = ({ rowData }: RowTableProps) => {
+const RowTable = ({ rowData }) => {
   return (
     <td className={Style.tableTD}>{rowData}</td>
   )
 }
 
-const HeadTable = ({ headData }: HeadTableProps) => {
+const HeadTable = ({ headData }) => {
   return (
     <th className={Style.tableTH}>{headData}</th>
   )
@@ -44,7 +36,7 @@ const TableData = ({ data }) => {
             <tr key={index}>
               {
                 Object.keys(item).map((keyItem, keyIndex) => {
-                  const rowData = item[keyItem as keyof typeof item];
+                  const rowData = item[keyItem];
                   if (rowData !== null) {
                     return <RowTable rowData={rowData.toString()} key={keyIndex} />
                   }
