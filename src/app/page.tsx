@@ -108,7 +108,7 @@ const App = () => {
         <Text text="Results" bold type="bigTitle" />
       </Row>
 
-      <BarChart title="Machine learning models accuracy" labels={['Random Forest', "XGBoost", "Decision Tree"]} values={[0.72, 0.8, 0.68]} />
+      <BarChart title="Machine learning models accuracy" labels={['Random Forest', "XGBoost", "Decision Tree"]} values={[0.8, 0.84, 0.76]} />
 
     </Column>
 
