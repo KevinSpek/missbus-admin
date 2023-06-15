@@ -74,34 +74,34 @@ const App = () => {
         <Text text="Statistics" bold type="bigTitle" />
       </Row>
       <Row fullWidth justifyContent='flex-start' padding={[16, 34]}>
-        <Text text="Mean comparison for each complain type" bold type="title" />
+        <Text text="Mean comparison for each complaint type" bold type="title" />
       </Row>
       <Row fullWidth gap={32} style={{ "flexWrap": "wrap" }} justifyContent='flex-start' padding={[32, 0]}>
-        <BarChart title="number of complaints" labels={['Late', "Didn't stop", "Didn't arrive", "Other"]} values={[5, 53, 40, 2]} />
-        <BarChart title="Mean relative humidity" labels={['Late', "Didn't stop", "Didn't arrive", "Other"]} values={[67, 53.296, 62.951, 66.5]} />
-        <BarChart title="Mean temperature (°C)" labels={['Late', "Didn't stop", "Didn't arrive", "Other"]} values={[16.14, 19.281, 17.834, 16.15]} />
-        <BarChart title="Mean wind speed (m/s)" labels={['Late', "Didn't stop", "Didn't arrive", "Other"]} values={[2.06, 2.8777777777777778, 2.421951219512195, 3.0]} />
-        <BarChart title="Mean rainfall (mm)" labels={['Late', "Didn't stop", "Didn't arrive", "Other"]} values={[0.0, 0.0, 0.00975609756097561, 0.05]} />
-        <BarChart title="Mean route length" labels={['Late', "Didn't stop", "Didn't arrive", "Other"]} values={[38.7, 50.422222222222224, 19.217073170731705, 19.4]} />
-        <BarChart title="Mean number of stations" labels={['Late', "Didn't stop", "Didn't arrive", "Other"]} values={[35.2, 26.11111111111111, 39.90243902439025, 46.5]} />
-        <BarChart title="Mean weekly drives" labels={['Late', "Didn't stop", "Didn't arrive", "Other"]} values={[231.2, 253.8148148148148, 301.4878048780488, 351.5]} />
-        <BarChart title="Mean passengers number sum " labels={['Late', "Didn't stop", "Didn't arrive", "Other"]} values={[1.2, 1.037037037037037, 1.2682926829268293, 1.5]} />
+        <BarChart title="number of complaints" labels={['On Time', 'Late', "Didn't stop", "Didn't arrive", "Other"]} values={[126, 25, 25, 36, 2]} />
+        <BarChart title="Mean relative humidity" labels={['On Time', 'Late', "Didn't stop", "Didn't arrive", "Other"]} values={[45.532, 47.88, 53.8, 65.75, 66.5]} />
+        <BarChart title="Mean temperature (°C)" labels={['On Time', 'Late', "Didn't stop", "Didn't arrive", "Other"]} values={[25.056, 25.18, 18.676, 16.711, 16.15]} />
+        <BarChart title="Mean wind speed (m/s)" labels={['On Time', 'Late', "Didn't stop", "Didn't arrive", "Other"]} values={[2.826, 2.16, 2.9, 2.522, 3.0]} />
+        <BarChart title="Mean rainfall (mm)" labels={['On Time', 'Late', "Didn't stop", "Didn't arrive", "Other"]} values={[0, 0, 0, 0, 0.05]} />
+        <BarChart title="Mean route length" labels={['On Time', 'Late', "Didn't stop", "Didn't arrive", "Other"]} values={[18.834, 18.792, 49.08, 19.656, 19.4]} />
+        <BarChart title="Mean number of stations" labels={['On Time', 'Late', "Didn't stop", "Didn't arrive", "Other"]} values={[34.667, 35.24, 26.12, 40.417, 46.5]} />
+        <BarChart title="Mean weekly drives" labels={['On Time', 'Late', "Didn't stop", "Didn't arrive", "Other"]} values={[359.111, 390.96, 250.4, 319.0, 351.5]} />
+        <BarChart title="Mean passengers number sum " labels={['On Time', 'Late', "Didn't stop", "Didn't arrive", "Other"]} values={[2.667, 2.36, 5.56, 2.806, 3]} />
       </Row>
       <Row fullWidth justifyContent='flex-start' padding={[16, 34]}>
-        <Text text="Mean comparison for each week day" bold type="title" />
+        <Text text="Mean comparison for each week day of compliants (without negative samples)" bold type="title" />
       </Row>
       <Row fullWidth gap={32} style={{ "flexWrap": "wrap" }} justifyContent='flex-start' padding={[32, 0]}>
-        <BarChart title="Number of complaints for each week day" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[27, 14, 24, 7, 21, 6, 1]} />
-        <BarChart title="Mean relative humidity" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[67.65, 61.833333333333336, 52.76190476190476, 44.5, 63.38461538461539, 50.5, 81.0]} />
-        <BarChart title="Mean temperature (°C)" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[16.990000000000002, 18.825, 20.219047619047622, 20.425, 15.446153846153846, 18.425, 18.3]} />
-        <BarChart title="Mean wind speed (m/s)" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[3.025, 2.1166666666666667, 2.604761904761905, 3.0250000000000004, 2.223076923076923, 2.35, 2.3]} />
-        <BarChart title="Mean rainfall (mm)" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[0.0, 0.03333333333333333, 0.004761904761904762, 0.0, 0.0, 0.0, 0.0]} />
-        <BarChart title="Mean route length" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[28.585, 21.208333333333332, 37.13809523809524, 50.425, 35.92307692307692, 23.799999999999997, 11.6]} />
-        <BarChart title="Mean number of stations" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[36.0, 41.333333333333336, 28.904761904761905, 28.5, 37.92307692307692, 37.75, 29.0]} />
-        <BarChart title="Mean weekly drives" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[261.35, 379.5, 267.6190476190476, 198.5, 273.6923076923077, 254.5, 302.0]} />
-        <BarChart title="Mean number of lines stopping at station " labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[38.65, 39.083333333333336, 30.38095238095238, 27.5, 17.692307692307693, 31.25, 42.0]} />
-        <BarChart title="Mean daily number of passengers at station " labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[302.28437503, 366.71701391666664, 313.03670634761903, 215.83333335, 240.48237179461537, 243.2604167, 643.4166667]} />
-        <BarChart title="Mean daily number of stops at station " labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[751.6, 764.75, 597.6666666666666, 565.0, 432.84615384615387, 639.75, 807.0]} />
+        <BarChart title="Number of complaints for each week day" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[19, 11, 19, 13, 14, 6, 6]} />
+        <BarChart title="Mean relative humidity" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[0.42105263157894735, 1.1818181818181819, 2.210526315789474, 3.0, 4.071428571428571, 4.5, 1.6666666666666667]} />
+        <BarChart title="Mean temperature (°C)" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[67.73684210526316, 65.63636363636364, 54.10526315789474, 37.76923076923077, 66.57142857142857, 47.666666666666664, 49.333333333333336]} />
+        <BarChart title="Mean wind speed (m/s)" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[2.8368421052631576, 2.1, 2.7421052631578946, 1.5846153846153848, 3.007142857142857, 2.2333333333333334, 3.016666666666667]} />
+        <BarChart title="Mean rainfall (mm)" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[0.0, 0.03636363636363637, 0.005263157894736842, 0.0, 0.0, 0.0, 0.0]} />
+        <BarChart title="Mean route length" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[31.93684210526316, 23.663636363636364, 34.33157894736842, 17.7, 28.657142857142855, 22.066666666666666, 26.683333333333334]} />
+        <BarChart title="Mean number of stations" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[35.68421052631579, 38.18181818181818, 29.736842105263158, 35.69230769230769, 33.57142857142857, 40.5, 40.333333333333336]} />
+        <BarChart title="Mean weekly drives" labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[249.57894736842104, 400.0, 315.3157894736842, 384.84615384615387, 328.7857142857143, 274.1666666666667, 306.1666666666667]} />
+        <BarChart title="Mean number of lines stopping at station " labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[37.10526315789474, 32.54545454545455, 28.894736842105264, 17.0, 27.285714285714285, 21.666666666666668, 32.666666666666664]} />
+        <BarChart title="Mean daily number of passengers at station " labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[224.2828947631579, 248.08143940909093, 238.37280701578948, 175.98397436153846, 213.28571430214285, 202.64583333833335, 247.76736113333334]} />
+        <BarChart title="Mean daily number of stops at station " labels={['Sunday', "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]} values={[722.7894736842105, 670.5454545454545, 574.6842105263158, 612.6153846153846, 527.0, 493.8333333333333, 766.8333333333334]} />
       </Row>
       <Divider style={{ "margin": '16px' }} />
       <Row fullWidth justifyContent='flex-start' padding={[16, 0]}>
